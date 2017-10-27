@@ -29,7 +29,10 @@
                  </div><!-- logo -->
                  <div class="headerright">                 
                    <?php if ( ! dynamic_sidebar('sidebar-header')): ?>
-                   
+                       <div class="column-2">
+                           <img src="<?php echo get_template_directory_uri(); ?>" alt="" />
+                           <div class="clear"></div>
+                       </div>
                     <div class="column-1">
                      <img src="<?php echo get_template_directory_uri(); ?>/images/icon-phone.jpg" alt="" />
                     <?php if( '' !== get_theme_mod('head_number')){ ?> 
@@ -40,17 +43,8 @@
                     <?php } ?>
                     <div class="clear"></div>
                     </div>
-                    
-                    <div class="column-2">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/icon-home.jpg" alt="" />    
-                    <?php if( '' !== get_theme_mod('head_address')){ ?>              
-                    <span class="headerphone"><?php echo esc_attr( get_theme_mod('head_address', 'Street 238, Perth,', 'skt-construction' )); ?></span><br>
-                    <?php } ?>
-                    <?php if( '' !== get_theme_mod('head_citycountry')){ ?> 
-                    <span class="headreemail"><?php echo esc_attr( get_theme_mod('head_citycountry', 'Western Australia', 'skt-construction' )); ?></span>
-                    <?php } ?>
-                    <div class="clear"></div>
-                    </div>
+
+
                   <?php endif; ?>  
                    <div class="column-3">
 				  <?php if ( '' !== get_theme_mod( 'fb_link' ) ) { ?>
